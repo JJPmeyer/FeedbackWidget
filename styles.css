@@ -1,8 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-button {
+#embed-container button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -11,11 +7,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#embed-container button:hover {
     background-color: #0056b3;
 }
 
-.popup {
+#embed-container .popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +23,7 @@ button:hover {
     align-items: center;
 }
 
-.popup-content {
+#embed-container .popup-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
@@ -35,11 +31,11 @@ button:hover {
     position: relative;
 }
 
-.hidden {
+#embed-container .hidden {
     display: none;
 }
 
-.close-button {
+#embed-container .close-button {
     position: absolute;
     top: 10px;
     right: 10px;
