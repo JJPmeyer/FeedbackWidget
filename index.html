@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Contact List</h1>
+    <ul id="contact-list">
+      <li>
+        <span>John Doe</span>
+        <button onclick="messagePerson('John Doe')">Message</button>
+      </li>
+      <li>
+        <span>Jane Smith</span>
+        <button onclick="messagePerson('Jane Smith')">Message</button>
+      </li>
+      <li>
+        <span>Mike Johnson</span>
+        <button onclick="messagePerson('Mike Johnson')">Message</button>
+      </li>
+    </ul>
+
+    <script>
+      function messagePerson(name) {
+        window.location.href = `message.html?name=${encodeURIComponent(name)}`
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Send a Message</h1>
+    <p id="contact-name"></p>
+    <input
+      type="text"
+      id="message-input"
+      placeholder="Type your message here"
+    />
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search)
+        return urlParams.get(param)
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const name = getQueryParam('name')
+        document.getElementById(
+          'contact-name'
+        ).innerText = `Message to: ${name}`
+      })
+
+      function sendMessage() {
+        const message = document.getElementById('message-input').value
+        if (message) {
+          alert(`Message sent to ${getQueryParam('name')}: ${message}`)
+          document.getElementById('message-input').value = ''
+        } else {
+          alert('Please enter a message.')
+        }
+      }
+    </script>
+  </body>
+</html>
